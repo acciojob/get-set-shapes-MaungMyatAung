@@ -1,6 +1,6 @@
 //complete this code
 class Rectangle {
-	private _width: number;
+    private _width: number;
     private _height: number;
 
     constructor(width: number, height: number) {
@@ -24,8 +24,8 @@ class Rectangle {
     }
 }
 
-class Square extends Animal {
-	constructor(side: number) {
+class Square extends Rectangle {
+    constructor(side: number) {
         if (side <= 0) {
             throw new Error("Side must be a positive integer.");
         }
