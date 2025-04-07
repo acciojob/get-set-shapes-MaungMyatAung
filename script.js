@@ -1,42 +1,39 @@
-//complete this code
+// Rectangle class
 class Rectangle {
-    private _width: number;
-    private _height: number;
-
-    constructor(width: number, height: number) {
+    constructor(width, height) {
         if (width <= 0 || height <= 0) {
             throw new Error("Width and height must be positive integers.");
         }
-        this._width = width;
-        this._height = height;
+        this._width = width;   // Initialize width property
+        this._height = height; // Initialize height property
     }
 
-    get width(): number {
-        return this._width;
+    get width() {
+        return this._width; // Getter for width
     }
 
-    get height(): number {
-        return this._height;
+    get height() {
+        return this._height; // Getter for height
     }
 
-    getArea(): number {
-        return this._width * this._height;
+    getArea() {
+        return this._width * this._height; // Calculate area
     }
 }
 
+// Square class that inherits from Rectangle
 class Square extends Rectangle {
-    constructor(side: number) {
+    constructor(side) {
         if (side <= 0) {
             throw new Error("Side must be a positive integer.");
         }
         super(side, side); // Call the Rectangle constructor with width and height as side
     }
 
-    getPerimeter(): number {
-        return this.width * 4; // Since width and height are the same in a square
+    getPerimeter() {
+        return this.width * 4; // Calculate perimeter
     }
 }
-
 
 // Do not change the code below this line
 window.Rectangle = Rectangle;
